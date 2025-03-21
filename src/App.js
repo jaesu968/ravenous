@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Business from './Business';
 import BusinessList from './BusinessList';
+import SearchBar from './SearchBar';
 
-function App() {
+function App(){
+  // create a businesses object to pass the BusinessList component
+  // can just duplicate the business component information here 
   const business = {
     imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
     name: 'MarginOtto Pizzeria',
@@ -15,10 +17,22 @@ function App() {
     rating: 4.5,
     reviewCount: 90
   };
+  // create an array of businesses to pass the BusinessList component
+  const businesses = [
+    business,
+    business,
+    business,
+    business,
+    business,
+    business
+  ];
+  // return the BusinessList component with the businesses array
   return (
     <div className="App">
       <header className="App-header">
-        <Business business={business} /> 
+        <h1>ravenous</h1>
+        <SearchBar />
+        <BusinessList businesses={businesses} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Hello Codecademy!
