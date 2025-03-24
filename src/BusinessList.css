@@ -1,8 +1,21 @@
 /*organize the business list in a grid*/
 .BusinessList {
-    display: flex;
-    justify-content: center; /* center the business cards */ 
-    flex-wrap: wrap; /* wrap the business cards */
-    gap: 2rem; /* Add consistent gap between items */ 
-    margin: 4.4rem 0; /* simplified margins , top and bottom */ 
+    display: grid; /* use a grid layout */ 
+    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */;
+    gap: 2 rem; /* Add consistent gap between items */
+    padding: 2rem; /* Add padding around the business cards */
+    max-width: 1200px; /* maximum width of the grid */
+    margin: 4.4rem auto; /* center the grid on the page */
+}
+
+/* make the grid responsive for smaller screens */ 
+@media screen and (max-width: 900px){
+    .BusinessList {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+@media screen and (max-width: 600px){
+    .BusinessList {
+        grid-template-columns: 1fr; /* 1 column on the smallest screens */
+    }
 }
