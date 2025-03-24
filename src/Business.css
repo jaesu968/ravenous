@@ -1,0 +1,17 @@
+/* for each business it should be
+picture top
+business name in bold below 
+address below and on the left and category, rating and # of reviews on the right  */ 
+.Business {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 16.66rem;
+    margin: 0 .5rem 2.3rem .5rem;
+  }
+  .Business-information{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+  }
+  

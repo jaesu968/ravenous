@@ -1,4 +1,5 @@
 import React from 'react';
+import './Business.css';
 
 /* A busines component to render a single business.
  it should display 
