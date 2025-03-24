@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchBar.css';
 
 /*Create a SearchBar component that 
 users can use to search for businesses on the Yelp platform.

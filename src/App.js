@@ -31,7 +31,9 @@ function App(){
       <header className="App-header">
         <h1>ravenous</h1>
         <SearchBar />
+        <div className="App-businesses">
         <BusinessList businesses={businesses} />
+        </div>
       </header>
     </div>
   );
