@@ -1,17 +1,51 @@
 /* for each business it should be
 picture top
-business name in bold below 
-address below and on the left and category, rating and # of reviews on the right  */ 
+business name in bold below , left aligned 
+address below and on the left and category, rating and # of reviews on the right  */
+/* the flex box for each business  */ 
 .Business {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 16.66rem;
-    margin: 0 .5rem 2.3rem .5rem;
+    flex-direction: column; /* stack elements vertically */ 
+    width: 16.66rem; /* Standarize business card width */ 
+    margin: 0 2rem 2.5rem; /* simplified margins , top, left and right, bottom*/
   }
+  /* image-container */ 
+  .Business .image-container {
+    height: 16.66rem; /* make container square */ 
+    margin-bottom: 1rem; /* add space below image */ 
+  }
+  /* the actual image */ 
+  .Business .image-container img {
+    width: 100%; /* make image fill container */
+    height: 100%; /* make image fill container */
+    object-fit: cover; /* mainntain aspect ratio and cover container */
+  }
+  /* the flex box for the business adddress and category, rating and # of reviews  */
   .Business-information{
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
+    flex-direction: row; /* place items side by side */ 
+    justify-content: space-between; /*space between address and review */ 
+    width: 100%; 
   }
-  
+  /* business address */ 
+  .Business-address {
+    text-align: left; 
+    width: 50%; 
+  }
+  /* business reviews section */ 
+  .Business-reviews {
+    text-align: right; 
+    width: 50%; 
+  }
+  /* business name */ 
+  .Business h2 {
+    margin-bottom: 0.5rem; /* add space below name */
+    font-size: 1.2rem; /* make name slightly larger */
+    font-weight: 600; 
+  }
+  /* business address */ 
+  .Business-address p {
+    font-size: 0.9rem; 
+    margin: 0.25rem 0; /* add space above and below address */
+  }
+ 
