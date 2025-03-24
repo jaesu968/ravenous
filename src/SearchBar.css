@@ -1,0 +1,64 @@
+/* set up the styles for the SearchBar component */
+.SearchBar{
+    display: flex; 
+    flex-direction: column; /* stack elements vertically */
+    justify-content: center; /* center the elements vertically */
+    background-image: url('https://content.codecademy.com/programs/react/ravenous/background_search_desktop.jpg'); /* set the background image */
+    background-size: cover; /* scale the image to cover the entire container */
+    background-repeat: no-repeat; /* do not repeat the image */
+    height: 25rem; /* set the height of the container */
+    padding: 1rem; /* add some padding to the container */
+}
+/* set up the styles for the SearchBar-sort-options container */
+.SearchBar-sort-options ul{
+    display: flex; /* display the sort options in a row */
+    justify-content: center; /* center the sort options horizontally */
+    margin-bottom: 2rem; /* add some margin below the sort options */
+    list-style: none; /* remove the default list style */
+    padding: 0; /* remove the default list padding */
+}
+.SearchBar-sort-options li{
+    cursor: pointer; /* change the cursor to a pointer when hovering over the sort options */
+    padding: 0 2 rem; /* add some padding to the left and right of the sort options */
+    color: #ffffff; /* set the text color to white */
+    transition: color .25s; /* add a smooth color transition on hover */
+}
+/* what happens when the user hovers over a sort option */
+.SearchBar-sort-options li:hover,
+ .SearchBar .active{
+    color: #f0c36c; /* change the text color to a golden color on hover */
+}
+/* set up the styles for the SearchBar-fields container */
+.SearchBar-fields{
+    display: flex; /* display the search fields in a row */
+    justify-content: center; /* center the search fields horizontally */
+    margin-bottom: 2rem; /* add some margin below the search fields */
+}
+
+/* set up the styles for the SearchBar-fields input elements */
+.SearchBar-fields input {
+    width: 21rem; /* set the width of the input elements */
+    padding: .66rem 1rem; /* add some padding to the input elements */
+    margin-right: 2rem; /* add some margin to the right of the input elements */
+    border: 1px solid #fff; /* add a border to the input elements */
+    border-radius: 4px; /* add some border radius to the input elements */
+    font-size: .77rem; /* set the font size of the input elements */
+    font-weigth: 500; /* set the font weight of the input elements */
+}
+/* set up the styles for the SearchBar-submit button */
+.SearchBar-fields input:last-child{
+    margin-right: 0; /* remove the margin to the right of the last input element */
+}
+.SearchBar-submit a{
+    border-radius: 4px; /* add some border radius to the button */
+    padding: .72rem 1.7rem; /* add some padding to the button */
+    background-color: #cca353; /* set the background color of the button */
+    color: #ffffff; /* set the text color of the button */
+    font-weight: 600; /* set the font weight of the button */
+    cursor: pointer; /* change the cursor to a pointer when hovering over the button */
+    transition: background-color .5s; /* add a smooth background color transition on hover */;
+}
+/* what happens when the user hovers over the submit button */
+SearchBar-submit a:hover{
+    background-color: #a7874b; /* change the background color to a darker golden color on hover */
+}
