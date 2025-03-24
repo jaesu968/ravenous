@@ -7,12 +7,12 @@ address below and on the left and category, rating and # of reviews on the right
     display: flex;
     flex-direction: column; /* stack elements vertically */ 
     width: 16.66rem; /* Standarize business card width */ 
-    margin: 0 2rem 2.5rem; /* simplified margins , top, left and right, bottom*/
+    margin: 0 2rem 2rem; /* simplified margins , top, left and right, bottom*/
   }
   /* image-container */ 
   .Business .image-container {
     height: 16.66rem; /* make container square */ 
-    margin-bottom: 1rem; /* add space below image */ 
+    margin-bottom: 0.3rem; /* add space below image */ 
   }
   /* the actual image */ 
   .Business .image-container img {
@@ -26,26 +26,81 @@ address below and on the left and category, rating and # of reviews on the right
     flex-direction: row; /* place items side by side */ 
     justify-content: space-between; /*space between address and review */ 
     width: 100%; 
+    min-height: 4.5rem; /*Set consistent height for address and review */ 
+    padding: 0.25rem 0; /* add consistent padding */ 
+  }
+  /* add styling for business addresses and business reviews */ 
+  .Business-address, 
+  .Business-reviews {
+    display: flex;
+    flex-direction: column; /* stack elements vertically */
+    justify-content: space-between; /* distribute space evenly */ 
+    width: 48%; /* take half width of parent */
+    height: 100%; /* take full height of parent */
   }
   /* business address */ 
   .Business-address {
-    text-align: left; 
-    width: 50%; 
+    text-align: left;
+    font-size: 0.9rem; /* make text slightly smaller and match reviews */ 
+    width: 50%;
+    margin: 0; /* remove margin from container */  
   }
   /* business reviews section */ 
   .Business-reviews {
     text-align: right; 
     width: 50%; 
+    font-size: 0.9rem; /* make text slightly smaller */
+    margin: 0; /* remove margin from container */
   }
+
+  /* apply margins to the actual text elements instead */ 
+  .Business-address p:first-child, 
+  .Business-reviews h3:first-child {
+    margin-top: 0; /* remove top margin from first element */
+  }
+
+  /* reset all text margin */ 
+  .Business-address p, 
+  .Business-reviews h3, 
+  .Business-reviews p {
+    margin: 0; /* remove margins */ 
+    line-height: 1.3; /* add consistent line height */
+  }
+
+  .Business-reviews h3 {
+    font-size: 1.25rem; /* match review text size */
+    margin: 0.25rem 0; /* match address spacing */ 
+    font-weight: normal; /* prevent bold making text appear larger */ 
+    color: #e0992e; /* should be light orange */ 
+  }
+
+  /*categoy styling */ 
+  .Business-reviews h3:first-child{
+    font-size: 1.1rem; /*slightly larger for category */ 
+    font-weight: 600; 
+    text-transform: uppercase; /* make category text uppercase */ 
+  }
+
+ /* rating and review count */ 
+ .Business-reviews .rating, 
+ .Business-reviews p {
+  font-size: 0.9rem; /* make text slightly smaller */
+ }
+
   /* business name */ 
   .Business h2 {
-    margin-bottom: 0.5rem; /* add space below name */
+    text-align: left; 
+    margin-bottom: 0.25rem; /* add space below name */
     font-size: 1.2rem; /* make name slightly larger */
-    font-weight: 600; 
+    font-weight: 700; /* make name bold */
   }
   /* business address */ 
   .Business-address p {
     font-size: 0.9rem; 
-    margin: 0.25rem 0; /* add space above and below address */
+  }
+  /* add specific styling for rating to maintain consistency */
+  .Business-reviews .rating {
+    font-size: 1rem; /* match review text size */
+    margin: 0.25rem 0; /* add space above and below rating */
   }
  

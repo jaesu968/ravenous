@@ -27,6 +27,7 @@
 
 .App-header h1 {
   margin: 2rem 0; /* add some margin above and below the h1 element */
+  color: #d2b93b; /* set the text color to orangered */
 }
 
 .App-link {
